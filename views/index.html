@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>test Ws mqtt.js</title>
+</head>
+<body>
+  live messages here 
+<script src="https://unpkg.com/mqtt@2.17.0/dist/mqtt.min.js"></script>
+<script>
+  // var client = mqtt.connect("http://127.0.0.1:1883") // you add a ws:// url here
+  var client = mqtt.connect("mqtt://broker.hivemq.com:1883")
+  client.subscribe("chat-room")
+ 
+  client.on("chat-room", function (topic, payload) {
+    alert([topic, payload].join(": "))
+    client.end()
+  })
+ 
+  client.publish("chat-room", "web browser message")
+</script> 
+</body>
+</html>

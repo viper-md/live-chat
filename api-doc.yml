@@ -1,0 +1,127 @@
+resourcePath: /v1
+description: State Call
+apis:
+
+- path: /v1/create_chat
+  operations:
+
+    - httpMethod: POST
+      summary: create_chat
+      notes:  Manadatory Params  (groupName, participants)
+      nickname: register_user
+      consumes:
+        - application/json
+      parameters:
+      - in: body
+        name: body
+        dataType: body
+        defaultValue: '{
+                          "groupName":"India-2.0",
+                          "participants":"pratik,sid,mukul,admin",
+                          "device_token" : "devicetoken",
+                          "device_type" : "IOS",
+                          "device_name" : "iPhone",
+                          "ip" : "",
+                          "app_version":  "1.1",
+                          "lat" : "",
+                          "long" : ""
+                       }'
+        paramType: body
+        required: true
+        description:
+      responses:
+        200:
+         description: app structure json
+
+- path: /v1/chat_list
+  operations:
+
+    - httpMethod: POST
+      summary: chat_list
+      notes:  Manadatory Params  (user_name)
+      nickname: chat_list
+      consumes:
+        - application/json
+      parameters:
+      - in: body
+        name: body
+        dataType: body
+        defaultValue: '{
+                          "user_name":"mukul",
+                          "device_token" : "devicetoken",
+                          "device_type" : "IOS",
+                          "device_name" : "iPhone",
+                          "ip" : "",
+                          "app_version":  "1.1",
+                          "lat" : "",
+                          "long" : ""
+                       }'
+        paramType: body
+        required: true
+        description:
+      responses:
+        200:
+         description: app structure json
+
+
+- path: /v1/send_message
+  operations:
+
+    - httpMethod: POST
+      summary: create_chat
+      notes:  Manadatory Params  (chat_id, message, sender)
+      nickname: register_user
+      consumes:
+        - application/json
+      parameters:
+      - in: body
+        name: body
+        dataType: body
+        defaultValue: '{
+                          "chat_id":"",
+                          "message":"hey people im using mqtt for chatting",
+                          "sender" : "mukul",
+                          "device_token" : "devicetoken",
+                          "device_type" : "IOS",
+                          "device_name" : "iPhone",
+                          "ip" : "",
+                          "app_version":  "1.1",
+                          "lat" : "",
+                          "long" : ""
+                       }'
+        paramType: body
+        required: true
+        description:
+      responses:
+        200:
+         description: app structure json
+
+- path: /v1/message_list
+  operations:
+
+    - httpMethod: POST
+      summary: create_chat
+      notes:  Manadatory Params  (chat_id)
+      nickname: register_user
+      consumes:
+        - application/json
+      parameters:
+      - in: body
+        name: body
+        dataType: body
+        defaultValue: '{
+                          "chat_id":"",
+                          "device_token" : "devicetoken",
+                          "device_type" : "IOS",
+                          "device_name" : "iPhone",
+                          "ip" : "",
+                          "app_version":  "1.1",
+                          "lat" : "",
+                          "long" : ""
+                       }'
+        paramType: body
+        required: true
+        description:
+      responses:
+        200:
+         description: app structure json

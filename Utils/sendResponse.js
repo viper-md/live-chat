@@ -28,7 +28,12 @@ exports.sendGzippedResponse = function (response, res) {
         res.set({ 'Content-Encoding': 'gzip' });
         return res.send(zippedData);
     });
-}
+};
+exports.parameterMissingError = function (res, flag = {}) {
+    var errorMsg = { status: 400, message: 'Sorry, Some parameter are missing', flag: 0 };
+    assign(errorMsg, flag);
+    sendData(errorMsg, res);
+};
 function sendData(data, res) {
     res.type('json');
     res.jsonp(data);

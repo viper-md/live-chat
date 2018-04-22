@@ -1,8 +1,8 @@
 {
     "PORT": "3000",
     "APP_NAME": "localhost",
-    "swaggerLink2": "https://localhost:3000/swagger/",
-    "swaggerLink": "",
+    "swaggerLink2": "http://localhost:3000/swagger/",
+    "swaggerLink": "http://localhost:3000/api",
     "projectName": "live-chat",
     "databaseSettings": {
         "host": "",
@@ -10,7 +10,7 @@
         "password": "",
         "database": "",
         "mysqlPORT": "",
-        "mongo_db_connection": "mongodb://mukuldevrani:alphabeta007@ds153869.mlab.com:53869/live-chat",
+        "mongo_db_connection": "mongodb://mukuldevrani:alphabeta007@ds253879.mlab.com:53879/chat-app",
         "redis": {
             "port": "6379",
             "host": "localhost"
