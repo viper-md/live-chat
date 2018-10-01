@@ -1,4 +1,4 @@
-# live-chat
+# Chat Application using MQTT protocol.
 ## swagger_docs : 
 ```
     web_url : http://54.234.227.245/swagger
